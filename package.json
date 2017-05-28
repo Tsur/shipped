@@ -1,0 +1,30 @@
+{
+  "name": "shipped",
+  "productName": "Shipped",
+  "version": "1.0.0",
+  "description": "Get the red box shipped out of the matrix",
+  "main": "desktop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "npm install",
+    "build": "tsc",
+    "desktop": "electron .",
+    "pack": "npm run pack-win && npm run pack-linux && npm run pack-darwin",
+    "pack-darwin": "npm run build && node scripts/pack_darwin.js",
+    "pack-win": "npm run build && node scripts/pack_win.js",
+    "pack-linux": "npm run build && node scripts/pack_linux.js",
+    "postbuild": "rollup build/main.js -o app.js && rm -rf build"
+  },
+  "author": "Zuri Pabon <zurisadai.pabon@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^7.0.18",
+    "electron": "^1.6.6",
+    "electron-installer-debian": "^0.5.1",
+    "electron-installer-dmg": "^0.2.1",
+    "electron-packager": "^8.7.0",
+    "electron-winstaller": "^2.5.2",
+    "rollup": "^0.41.6",
+    "typescript": "^2.3.3"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "outDir": "build",
+    "rootDir": "src",
+    "module": "es2015",
+    "declaration": true,
+    "inlineSourceMap": true,
+    "strictNullChecks": false,
+    "listFiles": false,
+    "pretty": true,
+    "baseUrl": "./src",
+    "lib": ["ES2017", "DOM"]
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules/**"
+  ],
+  "compileOnSave": false
+}
